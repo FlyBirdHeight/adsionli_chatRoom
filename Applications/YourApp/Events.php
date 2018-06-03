@@ -25,7 +25,7 @@ class Events
 {
     public static function onConnect($client_id)
     {
-        echo $client_id." login\n";
+        echo "onConnect";
     }
 
    public static function onMessage($client_id, $message)

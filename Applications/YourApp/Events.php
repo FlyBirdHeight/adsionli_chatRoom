@@ -25,14 +25,15 @@ class Events
 {
     public static function onConnect($client_id)
     {
-        echo "onConnect";
+        echo "onConnect\n";
+        echo $_SERVER['HTTP_ORIGIN'].'\n';
     }
 
    public static function onMessage($client_id, $message)
    {
        // debug
        echo "client:{$_SERVER['REMOTE_ADDR']}:{$_SERVER['REMOTE_PORT']} gateway:{$_SERVER['GATEWAY_ADDR']}:{$_SERVER['GATEWAY_PORT']}  client_id:$client_id session:".json_encode($_SESSION)." onMessage:".$message."\n";
-
+       echo "onmessage\n";
        // 客户端传递的是json数据
        $message_data = json_decode($message, true);
        if(!$message_data)

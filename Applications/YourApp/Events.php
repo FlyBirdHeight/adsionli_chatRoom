@@ -30,6 +30,7 @@ class Events
 
    public static function onMessage($client_id, $message)
    {
+       $flag = 0;
        // debug
        echo "client:{$_SERVER['REMOTE_ADDR']}:{$_SERVER['REMOTE_PORT']} gateway:{$_SERVER['GATEWAY_ADDR']}:{$_SERVER['GATEWAY_PORT']}  client_id:$client_id session:".json_encode($_SESSION)." onMessage:".$message."\n";
        // 客户端传递的是json数据
@@ -63,19 +64,23 @@ class Events
                foreach($clients_list as $tmp_client_id=>$item)
                {
                    $clients_list[$tmp_client_id] = $item['client_name'];
-                   echo $item['client_name'];
+                   if($client_name == $item['client_name']){
+                       $flag = 1;
+                   }
                }
-               $clients_list[$client_id] = $client_name;
+               if ($flag == 0){
+                   $clients_list[$client_id] = $client_name;
 
-               // 转播给当前房间的所有客户端，xx进入聊天室 message {type:login, client_id:xx, name:xx}
-               $new_message = array('type'=>$message_data['type'], 'client_id'=>$client_id, 'client_name'=>htmlspecialchars($client_name), 'time'=>date('Y-m-d H:i:s'));
-               Gateway::sendToGroup($room_id, json_encode($new_message));
-               Gateway::joinGroup($client_id, $room_id);
+                   // 转播给当前房间的所有客户端，xx进入聊天室 message {type:login, client_id:xx, name:xx}
+                   $new_message = array('type'=>$message_data['type'], 'client_id'=>$client_id, 'client_name'=>htmlspecialchars($client_name), 'time'=>date('Y-m-d H:i:s'));
+                   Gateway::sendToGroup($room_id, json_encode($new_message));
+                   Gateway::joinGroup($client_id, $room_id);
 
-               // 给当前用户发送用户列表
-               $new_message['client_list'] = $clients_list;
-               Gateway::sendToCurrentClient(json_encode($new_message));
-               return;
+                   // 给当前用户发送用户列表
+                   $new_message['client_list'] = $clients_list;
+                   Gateway::sendToCurrentClient(json_encode($new_message));
+                   return;
+               }
            // 客户端发言 message: {type:say, to_client_id:xx, content:xx}
            case 'say':
                // 非法请求

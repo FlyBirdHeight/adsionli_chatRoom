@@ -80,6 +80,8 @@ class Events
                    $new_message['client_list'] = $clients_list;
                    Gateway::sendToCurrentClient(json_encode($new_message));
                    return;
+               }else{
+                   return;
                }
            // 客户端发言 message: {type:say, to_client_id:xx, content:xx}
            case 'say':

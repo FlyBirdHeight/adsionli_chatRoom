@@ -91,7 +91,7 @@ class Events
                    throw new \Exception("\$_SESSION['room_id'] not set. client_ip:{$_SERVER['REMOTE_ADDR']}");
                }
                $Parsedown = new Parsedown();
-               echo $Parsedown->text($message_data['content']);
+               $message_data['content'] = $Parsedown->text($message_data['content']);
                $room_id = $_SESSION['room_id'];
                $client_name = $_SESSION['client_name'];
 

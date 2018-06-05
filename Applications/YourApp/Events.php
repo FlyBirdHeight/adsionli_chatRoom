@@ -63,6 +63,7 @@ class Events
                foreach($clients_list as $tmp_client_id=>$item)
                {
                    $clients_list[$tmp_client_id] = $item['client_name'];
+                   echo $item['client_name'];
                }
                $clients_list[$client_id] = $client_name;
 

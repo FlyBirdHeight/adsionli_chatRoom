@@ -38,7 +38,7 @@ class Events
        {
            return ;
        }
-        echo $message_data;
+//        echo $message_data['type'];
        // 根据类型执行不同的业务
        switch($message_data['type'])
        {

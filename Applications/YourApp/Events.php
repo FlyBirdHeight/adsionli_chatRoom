@@ -119,7 +119,7 @@ class Events
                    'to_client_id'=>'all',
                    'content'=>nl2br(htmlspecialchars($message_data['content'])),
                    'time'=>date('Y-m-d H:i:s'),
-                   'room_id'=>$room_id
+                   'room_id'=>$message_data['room_id']
                );
                return Gateway::sendToGroup($room_id ,json_encode($new_message));
        }

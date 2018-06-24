@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e818df2-949d-4f2a-9d89-aa2e2b4c8963" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Applications/YourApp/Events.php" beforeDir="false" afterPath="$PROJECT_DIR$/Applications/YourApp/Events.php" afterDir="false" />
-    </list>
+    <list default="true" id="6e818df2-949d-4f2a-9d89-aa2e2b4c8963" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +17,8 @@
       <file leaf-file-name="Events.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Applications/YourApp/Events.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="121" column="38" selection-start-line="121" selection-start-column="38" selection-end-line="121" selection-end-column="38" />
+            <state relative-caret-position="3">
+              <caret line="59" column="55" lean-forward="true" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -165,12 +162,12 @@
       <workItem from="1528340246724" duration="1202000" />
       <workItem from="1528461373993" duration="506000" />
       <workItem from="1528462050241" duration="14000" />
-      <workItem from="1529828769132" duration="38000" />
+      <workItem from="1529828769132" duration="678000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15924000" />
+    <option name="totallyTimeSpent" value="16564000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -449,8 +446,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Applications/YourApp/Events.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="121" column="38" selection-start-line="121" selection-start-column="38" selection-end-line="121" selection-end-column="38" />
+        <state relative-caret-position="3">
+          <caret line="59" column="55" lean-forward="true" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
         </state>
       </provider>
     </entry>

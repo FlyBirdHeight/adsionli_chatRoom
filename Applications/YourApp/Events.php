@@ -72,7 +72,7 @@ class Events
                    $clients_list[$client_id] = $client_name;
 
                    // 转播给当前房间的所有客户端，xx进入聊天室 message {type:login, client_id:xx, name:xx}
-                   $new_message = array('type'=>$message_data['type'], 'client_id'=>$client_id, 'client_name'=>htmlspecialchars($client_name), 'time'=>date('Y-m-d H:i:s'));
+                   $new_message = array('room_id'=>$room_id,'type'=>$message_data['type'], 'client_id'=>$client_id, 'client_name'=>htmlspecialchars($client_name), 'time'=>date('Y-m-d H:i:s'));
                    Gateway::sendToGroup($room_id, json_encode($new_message));
                    Gateway::joinGroup($client_id, $room_id);
 

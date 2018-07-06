@@ -56,8 +56,7 @@ class Events
                // 把房间号昵称放到session中
                $room_id = $message_data['room_id'];
                $client_name = htmlspecialchars($message_data['client_name']);
-               $_SESSION['room_id'] = $room_id;
-               $_SESSION['client_name'] = $client_name;
+               $_SESSION[$room_id] = $message_data;
 
                // 获取房间内所有用户列表
                $clients_list = Gateway::getClientSessionsByGroup($room_id);
@@ -86,16 +85,16 @@ class Events
            // 客户端发言 message: {type:say, to_client_id:xx, content:xx}
            case 'say':
                // 非法请求
-               if(!isset($_SESSION['room_id']))
+               if(!isset($_SESSION[$message_data['room_id']]))
                {
                    throw new \Exception("\$_SESSION['room_id'] not set. client_ip:{$_SERVER['REMOTE_ADDR']}");
                }
                $Parsedown = new Parsedown();
                $Parsedown->setMarkupEscaped(true);
                $message_data['content'] = $Parsedown->text($message_data['content']);
-               $room_id = $_SESSION['room_id'];
+               $room_id = $_SESSION[$message_data['room_id']]['room_id'];
                echo $room_id;
-               $client_name = $_SESSION['client_name'];
+               $client_name = $_SESSION[$message_data['room_id']]['client_name'];
 
                // 私聊
                if($message_data['to_client_id'] != 'all')

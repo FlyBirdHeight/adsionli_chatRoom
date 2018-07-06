@@ -93,8 +93,8 @@ class Events
                $Parsedown->setMarkupEscaped(true);
                $message_data['content'] = $Parsedown->text($message_data['content']);
                $room_id = $_SESSION[$message_data['room_id']]['room_id'];
-               echo $room_id;
-               $client_name = $_SESSION[$message_data['room_id']]['client_name'];
+               echo 'room_id:'.$room_id.'\n';
+               $client_name = $message_data['client_name'];
 
                // 私聊
                if($message_data['to_client_id'] != 'all')

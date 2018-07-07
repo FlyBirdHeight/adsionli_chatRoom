@@ -74,7 +74,6 @@ class Events
                    $new_message = array('room_id'=>$room_id,'type'=>$message_data['type'], 'client_id'=>$client_id, 'client_name'=>htmlspecialchars($client_name), 'time'=>date('Y-m-d H:i:s'));
                    Gateway::sendToGroup($room_id, json_encode($new_message));
                    Gateway::joinGroup($client_id, $room_id);
-
                    // 给当前用户发送用户列表
                    $new_message['client_list'] = $clients_list;
                    Gateway::sendToCurrentClient(json_encode($new_message));
@@ -92,6 +91,7 @@ class Events
                    echo "not login room \n";
                    $room_id = $message_data['room_id'];
                    $_SESSION[$room_id] = $message_data;
+                   Gateway::joinGroup($client_id, $room_id);
                }
                $Parsedown = new Parsedown();
                $Parsedown->setMarkupEscaped(true);

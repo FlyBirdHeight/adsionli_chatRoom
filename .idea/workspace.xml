@@ -19,8 +19,8 @@
       <file leaf-file-name="Events.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Applications/YourApp/Events.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="91" column="44" selection-start-line="91" selection-start-column="44" selection-end-line="91" selection-end-column="44" />
+            <state relative-caret-position="318">
+              <caret line="75" column="60" lean-forward="true" selection-start-line="75" selection-start-column="60" selection-end-line="75" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -167,12 +167,12 @@
       <workItem from="1528462050241" duration="14000" />
       <workItem from="1529828769132" duration="4218000" />
       <workItem from="1530863659685" duration="5440000" />
-      <workItem from="1530924653067" duration="564000" />
+      <workItem from="1530924653067" duration="3050000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26108000" />
+    <option name="totallyTimeSpent" value="28594000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -514,8 +514,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Applications/YourApp/Events.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="91" column="44" selection-start-line="91" selection-start-column="44" selection-end-line="91" selection-end-column="44" />
+        <state relative-caret-position="318">
+          <caret line="75" column="60" lean-forward="true" selection-start-line="75" selection-start-column="60" selection-end-line="75" selection-end-column="60" />
         </state>
       </provider>
     </entry>

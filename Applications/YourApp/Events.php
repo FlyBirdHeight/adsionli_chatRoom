@@ -84,16 +84,19 @@ class Events
                }
            // 客户端发言 message: {type:say, to_client_id:xx, content:xx}
            case 'say':
-               // 非法请求
+               // 非法请求,则将用户放入room中（遇到情况为仅仅用在已经成功连接并已经加入后，刷新页面数据丢失后重连）
                if(!isset($_SESSION[$message_data['room_id']]))
                {
-                   throw new \Exception("\$_SESSION['room_id'] not set. client_ip:{$_SERVER['REMOTE_ADDR']}");
+//                   throw new \Exception("\$_SESSION['room_id'] not set. client_ip:{$_SERVER['REMOTE_ADDR']}");
+                   // 把房间号昵称放到session中
+                   $room_id = $message_data['room_id'];
+                   $_SESSION[$room_id] = $message_data;
                }
                $Parsedown = new Parsedown();
                $Parsedown->setMarkupEscaped(true);
                $message_data['content'] = $Parsedown->text($message_data['content']);
                $room_id = $_SESSION[$message_data['room_id']]['room_id'];
-               echo 'room_id:'.$room_id.'\n';
+               echo 'room_id:'.$room_id."\n";
                $client_name = $message_data['client_name'];
 
                // 私聊

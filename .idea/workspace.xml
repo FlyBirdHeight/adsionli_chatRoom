@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e818df2-949d-4f2a-9d89-aa2e2b4c8963" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Applications/YourApp/Events.php" beforeDir="false" afterPath="$PROJECT_DIR$/Applications/YourApp/Events.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,8 +19,8 @@
       <file leaf-file-name="Events.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Applications/YourApp/Events.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="86" column="68" selection-start-line="86" selection-start-column="68" selection-end-line="86" selection-end-column="68" />
+            <state relative-caret-position="403">
+              <caret line="91" column="44" selection-start-line="91" selection-start-column="44" selection-end-line="91" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -168,12 +167,12 @@
       <workItem from="1528462050241" duration="14000" />
       <workItem from="1529828769132" duration="4218000" />
       <workItem from="1530863659685" duration="5440000" />
-      <workItem from="1530924653067" duration="520000" />
+      <workItem from="1530924653067" duration="564000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26064000" />
+    <option name="totallyTimeSpent" value="26108000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -188,7 +187,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4989339" weight="0.32606325" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.4989339" visible="true" weight="0.32606325" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -515,8 +514,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Applications/YourApp/Events.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="86" column="68" selection-start-line="86" selection-start-column="68" selection-end-line="86" selection-end-column="68" />
+        <state relative-caret-position="403">
+          <caret line="91" column="44" selection-start-line="91" selection-start-column="44" selection-end-line="91" selection-end-column="44" />
         </state>
       </provider>
     </entry>

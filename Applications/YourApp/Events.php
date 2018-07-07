@@ -89,6 +89,7 @@ class Events
                {
 //                   throw new \Exception("\$_SESSION['room_id'] not set. client_ip:{$_SERVER['REMOTE_ADDR']}");
                    // 把房间号昵称放到session中
+                   echo "not login room \n";
                    $room_id = $message_data['room_id'];
                    $_SESSION[$room_id] = $message_data;
                }
